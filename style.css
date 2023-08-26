@@ -1,0 +1,259 @@
+@import url(https://fonts.googleapis.com/css?family=Sniglet|Raleway:900);
+
+
+body, html{
+	height: 100%;
+	padding: 0;
+	margin: 0;
+	font-family: 'Lilita One', cursive;
+}
+h1{
+	font-weight: normal;
+	font-size: 4em;
+	font-family: 'Lilita One', cursive;
+	margin: 0 auto;
+	margin-top: 30px;
+	width: 500px;
+	color: #F90;
+	text-align: center;
+
+}
+
+/* Animation webkit */
+@-webkit-keyframes myfirst
+{
+	0% {margin-left: -235px}
+	90% {margin-left: 100%;}
+	100% {margin-left: 100%;}
+}
+
+/* Animation */
+@keyframes myfirst
+{
+	0% {margin-left: -235px}
+	70% {margin-left: 100%;}
+	100% {margin-left: 100%;}
+}
+
+.fish{
+	background-image: url('http://www.geertjanhendriks.nl/codepen/form/fish.png');
+	width: 235px;
+	height: 104px;
+	margin-left: -235px;
+	position: absolute;	
+	animation: myfirst 24s;
+	-webkit-animation: myfirst 24s;
+	animation-iteration-count: infinite;
+	-webkit-animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	-webkit-animation-timing-function: linear;
+}
+
+#fish{
+	top: 120px;
+}
+
+#fish2{
+	top: 260px;
+	animation-delay: 12s;
+	-webkit-animation-delay: 12s;
+}
+
+
+header{
+	height: 160px;
+	background: url('http://www.geertjanhendriks.nl/codepen/form/golf.png') repeat-x bottom;
+}
+
+#form{
+	height: 100%;	
+	background-color: #98d4f3;
+	overflow: hidden;
+	position: relative;
+	
+}
+form{
+	margin: 0 auto;
+	width: 500px;
+	padding-top: 40px;
+	color: rgb(13, 1, 1);
+	position: relative;
+	
+	
+}
+label, input, textarea{
+	display: block;	
+}
+input, textarea{
+	width: 500px;	
+	border: none;
+	border-radius: 20px;
+	outline: none;
+	padding: 10px;
+	font-family: 'Lilita One', cursive;
+	font-size: 1em;
+	color: #676767;
+	transition: border 0.5s;
+	-webkit-transition: border 0.5s;
+	-moz-transition: border 0.5s;
+	-o-transition: border 0.5s;
+	border: solid 3px #98d4f3;	
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+	
+}
+input:focus, textarea:focus{
+	border: solid 3px #77bde0;	
+}
+
+textarea{
+	height: 100px;	
+	resize: none; 
+	overflow: auto;
+}
+input[type="submit"]{
+	background-color: #F90;
+	color: white;
+	height: 50px;
+	cursor: pointer;
+	margin-top: 30px;
+	font-size: 1.29em;
+	font-family: 'Lilita One', cursive;
+	-webkit-transition: background-color 0.5s;
+	-moz-transition: background-color 0.5s;
+	-o-transition: background-color 0.5s;
+	transition: background-color 0.5s;
+}
+input[type="submit"]:hover{
+	background-color: #e58f0e;
+	
+}
+label{
+	font-size: 1.5em;
+	margin-top: 20px;
+	padding-left: 20px;
+}
+.formgroup, .formgroup-active, .formgroup-error{
+	background-repeat: no-repeat;
+	background-position: right bottom;
+	background-size: 10.5%;
+	transition: background-image 0.7s;
+	-webkit-transition: background-image 0.7s;
+	-moz-transition: background-image 0.7s;
+	-o-transition: background-image 0.7s;
+	width: 566px;
+	padding-top: 2px;
+}
+
+.formgroup{
+	background-image: url('http://www.geertjanhendriks.nl/codepen/form/pixel.gif');	
+}
+.formgroup-active{
+	background-image: url('http://www.geertjanhendriks.nl/codepen/form/octo.png');
+}
+.formgroup-error{
+	background-image: url('http://www.geertjanhendriks.nl/codepen/form/octo-error.png');
+	color: red;
+}
+
+
+
+ul{
+    position: relative;
+    display: flex;
+	margin-top: 50px;
+	justify-content: center;
+  	align-items: center;
+	right: 1%;
+
+}
+ul li{
+    position: relative;
+    list-style: none;
+    margin: 0 20px;
+    cursor: pointer;
+}
+ul li a{
+    text-decoration: none;}
+ul li a .fa{
+    font-size: 6em;
+    color: #020202;
+}
+ul li a .fa:hover{
+opacity: 0;
+transition: opacity 0.2s ease-in;
+}
+ul li:before{
+    position: absolute;
+  font-family: FontAwesome;
+    top: -10px;
+    left: 0;
+    font-size: 6em;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    transition: .3s ease-in-out;
+}
+ul li:nth-child(1)::before{
+    content: "\f16d";
+        background-image: linear-gradient(45deg, 
+          #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,
+          #bc1888 100%);
+        -webkit-background-clip: text;
+         -webkit-text-fill-color: transparent;
+        border-bottom: 4px solid #dc2743;
+}
+ul li:nth-child(2)::before{
+    content: '\f09b';
+    color: #0c140f;
+    border-bottom: 4px solid #0b1c11;
+}
+ul li:nth-child(3)::before{
+    content: '\f0e0';
+    color: #ffffff;
+    border-bottom: 4px solid #ffffff;
+}
+ul li:nth-child(4)::before{
+    content: '\f08c';
+    color: #1da1f2;
+    border-bottom: 4px solid #1da1f2;
+}
+ul li:hover:before{
+    height: 110%;
+}
+
+.btn{
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 30px;
+  }
+  
+  .bkButton {
+	background-color: #009688;
+	color: white;
+	border: none;
+	padding: 10px 20px;
+	border-radius: 4px;
+	font-size: 16px;
+	cursor: pointer;
+	transition: transform 0.3s ease;
+	animation: neon 1.5s linear infinite;
+  }
+  
+  .bkButton:hover {
+	transform: scale(1.1);
+  }
+  
+  @keyframes neon {
+	0% {
+	  box-shadow: 0 0 5px #009688, 0 0 20px #009688, 0 0 40px #009688, 0 0 60px #009688, 0 0 80px #009688;
+	}
+	50% {
+	  box-shadow: 0 0 5px #009688, 0 0 20px #009688, 0 0 40px #009688, 0 0 60px #009688, 0 0 100px #009688;
+	}
+	100% {
+	  box-shadow: 0 0 5px #009688, 0 0 20px #009688, 0 0 40px #009688, 0 0 60px #009688, 0 0 150px #009688;
+	}
+  }
